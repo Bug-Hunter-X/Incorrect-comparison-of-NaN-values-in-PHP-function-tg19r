@@ -1,0 +1,4 @@
+# Incorrect comparison of NaN values in PHP function
+This repository demonstrates a common error when comparing values in PHP, specifically involving NaN (Not a Number) values.
+The `foo` function in `bug.php` attempts to compare two values using strict equality (`===`). However, it fails when comparing NaN with 0 or another NaN value. This is because NaN is not equal to itself or any other value, even NaN.
+The solution, shown in `bugSolution.php`, illustrates how to correctly handle NaN values during comparison using the `is_nan()` function to check if the value is NaN before performing the comparison.
